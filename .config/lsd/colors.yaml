@@ -1,0 +1,30 @@
+# LS_COLORS doesn't cover metadata fields like user, group.
+# Set these here. Color chart: https://upload.wikimedia.org/wikipedia/commons/1/15/Xterm_256color_chart.svg
+
+user: 60
+group: 60
+permission:
+  read: 32
+  write: 42
+  exec: 212
+  exec-sticky: 125
+  no-access: 245
+  octal: 37
+  acl: 37
+  context: 245
+date:
+  hour-old: 64
+  day-old: 136
+  older: 144
+size:
+  none: 160
+  small: 145
+  medium: 43
+  large: 40
+inode:
+  valid: 64
+  invalid: 160
+links:
+  valid: 61
+  invalid: 240
+tree-edge: 245

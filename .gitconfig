@@ -1,0 +1,9 @@
+[user]
+	name = Bernard Duchesne
+	email = bernard@kiluna.com
+[color]
+	ui = true
+[core]
+	editor = code
+[init]
+	defaultBranch = main

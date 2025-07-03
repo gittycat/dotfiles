@@ -1,0 +1,7 @@
+# Use bat --list-themes to see all themes
+--theme="Dracula"
+
+# Do not show border lines
+--style="numbers,changes,header"
+
+--map-syntax "*.mdc:Markdown"
