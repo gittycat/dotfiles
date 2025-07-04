@@ -2,12 +2,38 @@
 
 My macOS and zsh setup.
 
+## Interesting tools
+
+Here are some of the more interesting tools installed using Homebrew. See the [.Brewfile](.Brewfile) for the full list.
+
+### Applications
+- [Ghostty](https://ghostty.org/) A new terminal from Mitchell Hashimoto
+- [Maccy](https://maccy.app/) Clipboard with history
+- [Obsidian](https://obsidian.md/) markdown notebook
+
+### Development
+
+- [OrbStack](https://orbstack.dev/) Fast VM (headless) hypervisor and Docker containers manager
+- [UTM](https://mac.getutm.app/) VM hypervisor.
+- [mise](https://mise.jdx.dev/) Manages multiple global environments for node, go, python, php, 
+- [uv](https://docs.astral.sh/uv/) Python package and virt env manager. Replaces everything from pyenv to pip. Much faster too.
+
+### CLI tools
+- [lsd](https://github.com/lsd-rs/lsd) A ls with better colours, filtering and sorting.
+- [ripgrep](https://github.com/BurntSushi/ripgrep) Fast (parallel) recursive grep.
+- [fzf](https://junegunn.github.io/fzf/) More powerful history command
+- [glow](https://github.com/charmbracelet/glow) Markdown rendering
+- Others: jq, dasel, fd, hyperfine, zoxide, git, gh, coreutils, gzip, openssl, rsync, wget, pandoc, exiftool, aws-cli, aws-cdk, tmux
 
 
+
+### Keeping it clean and pretty
+- [vivid](https://github.com/sharkdp/vivid) LS_COLORS generator
+- [Nord](https://www.nordtheme.com/ports/dircolors) A subdued colour theme
 
 ## About this repo
 
-We use the __bare repo__ technique described in a [few posts online](https://www.ackama.com/articles/the-best-way-to-store-your-dotfiles-a-bare-git-repository-explained/).
+I use the __bare repo__ technique described in a [few posts online](https://www.ackama.com/articles/the-best-way-to-store-your-dotfiles-a-bare-git-repository-explained/).
 Dotfiles and configs are tucked away in a *bare* repo so normal git tools never notice it.
 
 ### Installation
