@@ -1,10 +1,10 @@
-# Dotfiles and configs
+# My Dotfiles and configs
 
-My macOS and zsh setup.
+Some more interesting tools installed using Homebrew. See the [.Brewfile](.Brewfile) for the full list.
 
-## Interesting tools
+I install all my languages separately through Mise, except for Rust, although they've now improved this too.
 
-Here are some of the more interesting tools installed using Homebrew. See the [.Brewfile](.Brewfile) for the full list.
+I'm mostly on [Cursor](https://cursor.com/en) these days.
 
 ### Applications
 - [Ghostty](https://ghostty.org/) A new terminal from Mitchell Hashimoto
@@ -13,39 +13,45 @@ Here are some of the more interesting tools installed using Homebrew. See the [.
 
 ### Development
 
-- [OrbStack](https://orbstack.dev/) Fast VM (headless) hypervisor and Docker containers manager
-- [UTM](https://mac.getutm.app/) VM hypervisor.
-- [mise](https://mise.jdx.dev/) Manages multiple global environments for node, go, python, php, 
+- [OrbStack](https://orbstack.dev/) Fast VM (headless) hypervisor and Docker containers manager.
+- [UTM](https://mac.getutm.app/) OOS VM hypervisor. Seldom used now. Headless VMs through OrbStack is all I need.
+- [mise](https://mise.jdx.dev/) Manages multiple global environments for node, go, python, php. Decent Rust support was added recently.
 - [uv](https://docs.astral.sh/uv/) Python package and virt env manager. Replaces everything from pyenv to pip. Much faster too.
 
 ### CLI tools
-- [lsd](https://github.com/lsd-rs/lsd) A ls with better colours, filtering and sorting.
+The Rust community is re-implementing the old unix tools for faster (multi-core support), better ui (TUI in some) and eye candy (colour schemes). Here's my current crop.
+
+- [lsd](https://github.com/lsd-rs/lsd) A `ls` with better colours, filtering and sorting.
 - [ripgrep](https://github.com/BurntSushi/ripgrep) Fast (parallel) recursive grep.
-- [fzf](https://junegunn.github.io/fzf/) More powerful history command
-- [glow](https://github.com/charmbracelet/glow) Markdown rendering
-- Others: jq, dasel, fd, hyperfine, zoxide, git, gh, coreutils, gzip, openssl, rsync, wget, pandoc, exiftool, aws-cli, aws-cdk, tmux
+- [fd](https://github.com/sharkdp/fd) Fast parallel `find`.
+- [zoxide](https://github.com/ajeetdsouza/zoxide) a `cd` command with shortcuts
+- [hyperfine](https://github.com/sharkdp/hyperfine) Benchmark tool for CLI commands.
+- [starship](https://starship.rs/) Prompt customisation. Use in small doses to avoid prompt lag.
+- [glow](https://github.com/charmbracelet/glow) Markdown rendering on terminal.
+- Others: jq, dasel, fd, hyperfine, git, gh, coreutils, gzip, openssl, rsync, wget, pandoc, exiftool, aws-cli, aws-cdk, tmux
+
+### [Rising](https://excaliburzero.gitbooks.io/an-introduction-to-linux-ricing/content/ricing.html) it up
+- [vivid](https://github.com/sharkdp/vivid) LS_COLORS generator. Combined with lsd color.yaml to cover the full colorising of the listing command.
+- Themes: [Nord](https://www.nordtheme.com/ports/dircolors) or [Tokyo Night]()
 
 
-
-### Keeping it clean and pretty
-- [vivid](https://github.com/sharkdp/vivid) LS_COLORS generator
-- [Nord](https://www.nordtheme.com/ports/dircolors) A subdued colour theme
+## Security Settings
 
 ## About this repo
 
 I use the __bare repo__ technique described in a [few posts online](https://www.ackama.com/articles/the-best-way-to-store-your-dotfiles-a-bare-git-repository-explained/).
 Dotfiles and configs are tucked away in a *bare* repo so normal git tools never notice it.
 
-### Installation
+### Repo Use
 
 ```zsh
 # 1 · Clone it as a bare repo
 git clone --bare https://github.com/gittycat/dotfiles.git $HOME/.dotfiles
 
-# 2 · Handy alias. Only use it when working on the repo
+# 2 · Handy alias. I only define it when working on the repo
 alias dot='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 
-# 3 · Ignore the repo directory itself
+# 3 · Ignore the repo itself
 echo '.dotfiles' >> $HOME/.gitignore
 
 # 4 · Check out tracked files into $HOME

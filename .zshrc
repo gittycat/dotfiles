@@ -44,9 +44,6 @@ source /Users/bernard/.config/op/plugins.sh
 # Rust
 . "$HOME/.cargo/env"
 
-# Prevent lines that start with a space from being recorded
-setopt HIST_IGNORE_SPACE
-
 # CDK warning. Remove warning banner when using newer node versions
 export JSII_SILENCE_WARNING_UNTESTED_NODE_VERSION=true
 
@@ -58,17 +55,35 @@ export PATH="$PATH:/Users/bernard/.lmstudio/bin"
 
 export PATH="$PATH:/Users/bernard/.modular/bin"
 
-export LS_COLORS="$(vivid generate nord)";
+#export LS_COLORS="$(vivid generate nord)";
+export LS_COLORS="$(vivid generate tokyonight-storm)";
+
 
 eval "$(zoxide init zsh)"
 
 # Command prompt styling
-# See  ~/.config/starship.toml
 eval "$(starship init zsh)"
-
-# fzf history command: Set up fzf key bindings and fuzzy completion
-source <(fzf --zsh)
 
 # Mise env support for python, go, ... On by default with brew install
 eval "$(mise activate zsh)"
 
+
+# Command history (using Atuin)
+# ----------------------------------------------------
+export HISTFILE=~/.zsh_history
+export HISTSIZE=10000
+export SAVEHIST=10000
+# Append to the history file, don't overwrite it
+setopt APPEND_HISTORY
+# Write to the history file immediately, not when the shell exits
+setopt INC_APPEND_HISTORY
+# Share history between all active shells
+setopt SHARE_HISTORY
+# Prevent lines that start with a space from being recorded
+setopt HIST_IGNORE_SPACE
+
+eval "$(atuin init zsh)"
+
+# dotfiles repo
+# Only enable it when dealing with the dotfiles repo
+# alias dot='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'

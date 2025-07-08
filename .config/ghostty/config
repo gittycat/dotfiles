@@ -1,0 +1,14 @@
+theme = tokyonight-storm
+# background = 1e1d2c
+# foreground = ced5f1
+# background-opacity = 0.95
+# background-blur = 12
+
+font-family = Hack Nerd Font Mono
+font-size = 12
+
+# Key mapping in Ghostty happen before the shell's own keymapping
+keybind = cmd+right=next_tab
+keybind = cmd+left=previous_tab
+
+# title = Ghostty

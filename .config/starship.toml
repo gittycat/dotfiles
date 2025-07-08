@@ -1,0 +1,52 @@
+# starship custom theme: tokyonight-storm
+add_newline = true 
+
+format = """
+$directory\
+$fill\
+$git_branch$git_status $time 
+$character"""
+
+# Set 'tokyonight-storm' as custom color palette
+palette = "tokyonight-storm"
+
+# Redefine default colors
+[palettes.tokyonight-storm]
+dark_blue = '#398770'
+mustard = '#af8700'
+
+
+[fill]
+symbol = ' '
+
+[character]
+success_symbol = "❯"
+error_symbol   = "[❯](bold fg:red)"
+
+[directory]
+truncation_length = 3        # keep three full segments
+truncate_to_repo  = false    # don’t cut back to the repo root
+fish_style_pwd_dir_length = 0  # 0 = disable fish-style abbreviations
+truncation_symbol = "…/"
+style   = "italic blue"
+format  = '[$path]($style)'
+
+[time]
+disabled = false
+format = "[ $time]($style)"
+time_format = "%b %-d %T"   # e.g. Jun 8, 2:05:33
+utc_time_offset = "local"
+style = "italic dimmed white"
+
+[git_branch]
+symbol = ""
+format = "[$symbol $branch](italic green)"
+
+[git_status]
+format = "[($modified$staged$untracked)]($style)"
+style = "bold italic red"
+conflicted = "​"
+untracked = "​?"
+modified = "!​"
+stashed = "≡"
+deleted = "[✕](italic red)"
