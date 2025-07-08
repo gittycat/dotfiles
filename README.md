@@ -26,16 +26,14 @@ The Rust community is re-implementing the old unix tools for faster (multi-core 
 - [fd](https://github.com/sharkdp/fd) Fast parallel `find`.
 - [zoxide](https://github.com/ajeetdsouza/zoxide) a `cd` command with shortcuts
 - [hyperfine](https://github.com/sharkdp/hyperfine) Benchmark tool for CLI commands.
-- [starship](https://starship.rs/) Prompt customisation. Use in small doses to avoid prompt lag.
 - [glow](https://github.com/charmbracelet/glow) Markdown rendering on terminal.
 - Others: jq, dasel, fd, hyperfine, git, gh, coreutils, gzip, openssl, rsync, wget, pandoc, exiftool, aws-cli, aws-cdk, tmux
 
-### [Rising](https://excaliburzero.gitbooks.io/an-introduction-to-linux-ricing/content/ricing.html) it up
-- [vivid](https://github.com/sharkdp/vivid) LS_COLORS generator. Combined with lsd color.yaml to cover the full colorising of the listing command.
-- Themes: [Nord](https://www.nordtheme.com/ports/dircolors) or [Tokyo Night]()
+### [Ricing](https://excaliburzero.gitbooks.io/an-introduction-to-linux-ricing/content/ricing.html) it up
+- [vivid](https://github.com/sharkdp/vivid) LS_COLORS generator. Combine it with lsd config (color.yaml) to cover the full colorising of the listing command.
+- Current Theme: [Tokyo Night Storm](https://github.com/tokyo-night/tokyo-night-vscode-theme)
+- [starship](https://starship.rs/) Prompt customisation. Use in small doses to avoid prompt lag.
 
-
-## Security Settings
 
 ## About this repo
 
