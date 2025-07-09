@@ -1,0 +1,33 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    // fastfetch does not interprets colour escape sequences like
+    // (\e[38;5;...m). They are counted as normal empty characters,
+    // pushing the right hand size further to the right.
+    // This is fixed by specifying the "width" of the logo
+    // as shown here.
+    // 
+    "source": "$HOME/.config/fastfetch/latte-poor.ansi",
+    "type": "file-raw",     // treat as raw text; don't try to “guess”
+    "width": 80,            // actual visible columns of your logo
+    "padding": { "right": 0 } // shrink default 4-space gap
+  },
+  "modules": [
+    "title",
+    "separator",
+    "os",
+    "host",
+    "locale",
+    "uptime",
+    "shell",
+    "terminal",
+    "terminalfont",
+    "packages",
+    "break",
+    "display",
+    "cpu",
+    "gpu",
+    "memory",
+    "disk"
+  ]
+}

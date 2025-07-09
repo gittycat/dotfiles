@@ -21,18 +21,20 @@ I'm mostly on [Cursor](https://cursor.com/en) these days.
 ### CLI tools
 The Rust community is re-implementing the old unix tools for faster (multi-core support), better ui (TUI in some) and eye candy (colour schemes). Here's my current crop.
 
-- [lsd](https://github.com/lsd-rs/lsd) A `ls` with better colours, filtering and sorting.
-- [ripgrep](https://github.com/BurntSushi/ripgrep) Fast (parallel) recursive grep.
-- [fd](https://github.com/sharkdp/fd) Fast parallel `find`.
-- [zoxide](https://github.com/ajeetdsouza/zoxide) a `cd` command with shortcuts
-- [hyperfine](https://github.com/sharkdp/hyperfine) Benchmark tool for CLI commands.
-- [glow](https://github.com/charmbracelet/glow) Markdown rendering on terminal.
-- Others: jq, dasel, fd, hyperfine, git, gh, coreutils, gzip, openssl, rsync, wget, pandoc, exiftool, aws-cli, aws-cdk, tmux
+- [lsd](https://github.com/lsd-rs/lsd). A `ls` with better colours, filtering and sorting.
+- [ripgrep](https://github.com/BurntSushi/ripgrep). Fast (parallel) recursive grep.
+- [fd](https://github.com/sharkdp/fd). A fast parallel `find`.
+- [zoxide](https://github.com/ajeetdsouza/zoxide). A `cd` command with shortcuts
+- [hyperfine](https://github.com/sharkdp/hyperfine). Benchmarking tool for CLI commands.
+- [glow](https://github.com/charmbracelet/glow). Markdown rendering on terminal.
+- [Chafa](https://hpjansson.org/chafa/) Powerful image display for terminals. It also produces high quality ascii rendering from images.
+- Others: jq, dasel, git, gh, coreutils, gzip, openssl, rsync, wget, pandoc, exiftool, aws-cli, aws-cdk, tmux
 
-### [Ricing](https://excaliburzero.gitbooks.io/an-introduction-to-linux-ricing/content/ricing.html) it up
+### Ricing
+- Current Theme: [Tokyo Night Storm](https://github.com/tokyo-night/tokyo-night-vscode-theme)<br>
+Used in terminals, editors.
 - [vivid](https://github.com/sharkdp/vivid) LS_COLORS generator. Combine it with lsd config (color.yaml) to cover the full colorising of the listing command.
-- Current Theme: [Tokyo Night Storm](https://github.com/tokyo-night/tokyo-night-vscode-theme)
-- [starship](https://starship.rs/) Prompt customisation. Use in small doses to avoid prompt lag.
+- [starship](https://starship.rs/) Prompt customisation. Use it in small doses to avoid prompt lag.
 
 
 ## About this repo
@@ -40,7 +42,7 @@ The Rust community is re-implementing the old unix tools for faster (multi-core 
 I use the __bare repo__ technique described in a [few posts online](https://www.ackama.com/articles/the-best-way-to-store-your-dotfiles-a-bare-git-repository-explained/).
 Dotfiles and configs are tucked away in a *bare* repo so normal git tools never notice it.
 
-### Repo Use
+### Cloning the repo
 
 ```zsh
 # 1 · Clone it as a bare repo
@@ -49,25 +51,18 @@ git clone --bare https://github.com/gittycat/dotfiles.git $HOME/.dotfiles
 # 2 · Handy alias. I only define it when working on the repo
 alias dot='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 
-# 3 · Ignore the repo itself
-echo '.dotfiles' >> $HOME/.gitignore
+# 3 · Hide all files not in the repo
+dot config --local status.showUntrackedFiles no
 
 # 4 · Check out tracked files into $HOME
 dot checkout
-
-# 5 · Hide all files not in the repo
-dot config --local status.showUntrackedFiles no
 ```
 
-### Daily use
+### Updating the repo
 
 ```zsh
-cd ~
-dot add .config/some-config-file
-dot commit -m "Added some-config"
+# 1. Add a new config file
+dot add .config/sample.conf
+dot commit -m "Added sample.conf"
 dot push
 ```
-
----
-
-*License: MIT*
