@@ -4,7 +4,7 @@ add_newline = true
 format = """
 $directory\
 $fill\
-$git_branch$git_status $time 
+$git_branch$git_status ${env_var.WRAP_STATE} $time 
 $character"""
 
 # Set 'tokyonight-storm' as custom color palette
@@ -50,3 +50,8 @@ untracked = "​?"
 modified = "!​"
 stashed = "≡"
 deleted = "[✕](italic red)"
+
+[env_var.WRAP_STATE]   # show terminal lines wrapping. Value set in .zshrc
+variable = "WRAP_STATE"
+format   = '[$env_value]($style)'
+style    = 'dimmed yellow'

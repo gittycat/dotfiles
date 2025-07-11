@@ -1,7 +1,7 @@
 theme = tokyonight-storm
 # background = 1e1d2c
 # foreground = ced5f1
-# background-opacity = 0.95
+# background-opacity = 0.8
 # background-blur = 12
 
 font-family = Hack Nerd Font Mono
