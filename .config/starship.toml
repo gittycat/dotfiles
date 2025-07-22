@@ -1,20 +1,12 @@
-# starship custom theme: tokyonight-storm
+palette = "tokyonight-custom"
 add_newline = true 
 
 format = """
-$directory\
+$directory \
+$git_branch$git_status\
 $fill\
-$git_branch$git_status ${env_var.WRAP_STATE} $time 
+${env_var.WRAP_STATE} $time 
 $character"""
-
-# Set 'tokyonight-storm' as custom color palette
-palette = "tokyonight-storm"
-
-# Redefine default colors
-[palettes.tokyonight-storm]
-dark_blue = '#398770'
-mustard = '#af8700'
-
 
 [fill]
 symbol = ' '
@@ -40,11 +32,12 @@ style = "italic dimmed white"
 
 [git_branch]
 symbol = ""
-format = "[$symbol $branch](italic green)"
+format = "[[](fg:teal)$symbol $branch ]($style)"
+style = "italic fg:white bg:teal"
 
 [git_status]
-format = "[($modified$staged$untracked)]($style)"
-style = "bold italic red"
+format = "[($modified$staged$untracked)[ ](fg:teal)]($style)"
+style = " bold italic fg:yellow bg:teal"
 conflicted = "​"
 untracked = "​?"
 modified = "!​"
@@ -55,3 +48,9 @@ deleted = "[✕](italic red)"
 variable = "WRAP_STATE"
 format   = '[$env_value]($style)'
 style    = 'dimmed yellow'
+
+[palettes.tokyonight-custom]
+mustard = '#af8700'
+teal ='#28536A'
+canvas = '#24283B'
+grey = '#888888'

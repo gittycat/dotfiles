@@ -1,15 +1,14 @@
 # My Dotfiles and configs
 
-Some more interesting tools installed using Homebrew. See the [.Brewfile](.Brewfile) for the full list.
+This repo focuses only on terminal tools and settings. Homebrew is used to install almost everything. See the [.Brewfile](.Brewfile) for the full list.
 
-I install all my languages separately through Mise, except for Rust, although they've now improved this too.
-
-I'm mostly on [Cursor](https://cursor.com/en) these days.
+Programming languages are installed separately through Mise (see below), except for Rust, although they've now improved that too but I haven't tried it yet.
 
 ### Applications
-- [Ghostty](https://ghostty.org/) A new terminal from Mitchell Hashimoto
-- [Maccy](https://maccy.app/) Clipboard with history
-- [Obsidian](https://obsidian.md/) markdown notebook
+
+- [Ghostty](https://ghostty.org/) A new but solid terminal from Mitchell Hashimoto.
+- [Maccy](https://maccy.app/) Clipboard with history. Open Source and widely used (safe).
+- [Obsidian](https://obsidian.md/) markdown notebook. I'm using it like a data lake for notes.
 
 ### Development
 
@@ -19,23 +18,26 @@ I'm mostly on [Cursor](https://cursor.com/en) these days.
 - [uv](https://docs.astral.sh/uv/) Python package and virt env manager. Replaces everything from pyenv to pip. Much faster too.
 
 ### CLI tools
-The Rust community is re-implementing the old unix tools for faster (multi-core support), better ui (TUI in some) and eye candy (colour schemes). Here's my current crop.
 
+The Rust and Go communities have re-implemented the old unix tools for faster (multi-core support), better ui (TUI in some) and eye candy (colour schemes). Here's my current crop.
+
+- [atuin](https://atuin.sh/) A shell command history. I'm constantly using it. It's open source, widely used and I'm satisfied with its safety.
 - [lsd](https://github.com/lsd-rs/lsd). A `ls` with better colours, filtering and sorting.
 - [ripgrep](https://github.com/BurntSushi/ripgrep). Fast (parallel) recursive grep.
 - [fd](https://github.com/sharkdp/fd). A fast parallel `find`.
 - [zoxide](https://github.com/ajeetdsouza/zoxide). A `cd` command with shortcuts
 - [hyperfine](https://github.com/sharkdp/hyperfine). Benchmarking tool for CLI commands.
 - [glow](https://github.com/charmbracelet/glow). Markdown rendering on terminal.
-- [Chafa](https://hpjansson.org/chafa/) Powerful image display for terminals. It also produces high quality ascii rendering from images.
-- Others: jq, dasel, git, gh, coreutils, gzip, openssl, rsync, wget, pandoc, exiftool, aws-cli, aws-cdk, tmux
+- [chafa](https://hpjansson.org/chafa/) Powerful image display for terminals. It also produces high-quality ASCII art from images as a side effect of supporting terminals with no graphical capabilities.
+- [entr](https://eradman.com/entrproject/) File watcher. Run arbitrary command when a file changes.
+- Others (The usual suspects): jq, dasel, git, gh, coreutils, gzip, openssl, rsync, wget, pandoc, exiftool, aws-cli, aws-cdk, tmux
 
 ### Ricing
+
 - Current Theme: [Tokyo Night Storm](https://github.com/tokyo-night/tokyo-night-vscode-theme)<br>
 Used in terminals, editors.
 - [vivid](https://github.com/sharkdp/vivid) LS_COLORS generator. Combine it with lsd config (color.yaml) to cover the full colorising of the listing command.
-- [starship](https://starship.rs/) Prompt customisation. Use it in small doses to avoid prompt lag.
-
+- [starship](https://starship.rs/) Prompt customisation. Use sparingly to avoid prompt lag.
 
 ## About this repo
 
