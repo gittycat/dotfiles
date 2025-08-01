@@ -1,0 +1,8 @@
+{
+  "default": true, // start from markdownlint’s defaults
+  "MD013": false,
+  "MD022": { // blanks-around-headings
+    "lines_above": 1, // keep the blank line *before* a heading
+    "lines_below": 0 // but allow the text to start immediately after
+  }
+}

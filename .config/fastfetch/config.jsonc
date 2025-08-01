@@ -7,10 +7,12 @@
     // This is fixed by specifying the "width" of the logo
     // as shown here.
     // 
-    "source": "$HOME/.config/fastfetch/latte-poor.ansi",
-    "type": "file-raw",     // treat as raw text; don't try to “guess”
-    "width": 80,            // actual visible columns of your logo
-    "padding": { "right": 0 } // shrink default 4-space gap
+    "source": "$HOME/.config/fastfetch/latte-pour.ansi",
+    "type": "file-raw", // treat as raw text; don't try to “guess”
+    "width": 80, // actual visible columns of your logo
+    "padding": {
+      "right": 0
+    } // shrink default 4-space gap
   },
   "modules": [
     "title",

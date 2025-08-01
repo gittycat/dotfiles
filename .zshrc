@@ -20,6 +20,15 @@ if command -v brew >/dev/null; then
 fi
 autoload -Uz compinit && compinit   # run after FPATH is populated
 
+# 1 – case-insensitive TAB completion (keeps real case in the result)
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
+# 2 – limit the rule to cd/lcd only (optional)
+# zstyle ':completion:*:(cd|lcd):*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
+# 3 – case-insensitive globbing when you actually type patterns (optional)
+# setopt NO_CASE_GLOB
+
 # Plugins / prompts --------------------------------------------------
 eval "$(mise activate zsh)"
 eval "$(zoxide init --cmd cd zsh)"  # must follow compinit for completions
